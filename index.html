@@ -1,123 +1,243 @@
-<nav class="Navbar">
-    <div class="l-Wrapper l-Wrapper--reset@sm-down">
-      <ul class="u-pullRight u-hidden@xs-down">
-        <li>
-          <a class="Navbar-btn Navbar-btn--main" href="http://sonjastrieder.com/download/sonja-strieder-frontend-ui-developer.pdf" target="_blank">Download 
-            <span>(pdf)</span>
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="https://njhgfd203.github.io" target="_blank">Linkedin</a></li>
-        <li><a href="https://njhgfd203.github.io/" target="_blank">Twitter</a></li>
-        <li><a href="https://codepen.io/sonjastrieder" target="_blank">Codepen</a></li>
-      </ul>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё резюме</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --danger: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .position {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+        
+        button, input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        button {
+            background-color: var(--primary);
+            color: white;
+            flex: 1;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        input {
+            border: 1px solid #ddd;
+            flex: 3;
+        }
+        
+        .random-bg {
+            background-color: var(--danger);
+        }
+        
+        @media (max-width: 600px) {
+            .controls {
+                flex-direction: column;
+            }
+            
+            header {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Фото профиля" class="profile-img">
+            <h1 id="fullname">Иван Жвакин</h1>
+            <p class="position">Frontend-разработчик</p>
+        </header>
+        
+        <section>
+            <h2>Обо мне</h2>
+            <p>Я фронтенд-разработчик с 3-летним опытом работы. Специализируюсь на создании адаптивных и интерактивных веб-приложений с использованием современных технологий.</p>
+        </section>
+        
+        <section>
+            <h2>Навыки</h2>
+            <div class="skills">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Git</span>
+                <span class="skill">Адаптивная верстка</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Опыт работы</h2>
+            <div class="experience-item">
+                <h3>Веб-студия "ДизайнМаркет"</h3>
+                <p class="date">2020 - настоящее время</p>
+                <p>Разработка и поддержка клиентских веб-приложений, оптимизация производительности.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Образование</h2>
+            <div class="education-item">
+                <h3>СТАНКИН </h3>
+                <p class="date">2016 - 2020</p>
+                <p>Бакалавр по специальности "Автоматизация техологических процессов и производств"</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Контакты</h2>
+            <p>Email: example@mail.com</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+        </section>
+        
+        <div class="controls">
+            <input type="text" id="lastnameInput" placeholder="Введите новую фамилию">
+            <button id="changeNameBtn">Изменить фамилию</button>
+            <button id="randomBgBtn">Случайный фон</button>
+        </div>
     </div>
-  </nav>
-  
-  <article class="l-Wrapper">
-  
-    <div class="l-Header">
-      <div class="l-Header-col">
-        <a href="http://www.daniilSkorykh.com" target="_blank">
-          <h1 class="Title">
-            <span class="u-shadow">
-              Daniil<br>
-              Skorykh АДБ-22-06
-            </span>
-            <span class="Title-sub">Музыкант и гитарист</span>
-          </h1>
-        </a>
-      </div>
-      <div class="l-Header-col Contact">
-        <div>Москва</div>
-        <div><a class="u-link" href="http://www.daniilSkorykh.com/" target="_blank">http://www.daniilSkorykh.com</a></div>
-        <div><a class="u-link" href="mailto:skorykh.03@mail.ru" target="_blank">skorykh.03@mail.ru</a></div>
-      </div>
-    </div>
-  
-    <section class="l-Section">
-      <h2 class="l-Section-title h3 u-hidden@sm-down">Profile</h2>
-      <div class="l-Section-content">
-        <p>Я специализируюсь на студийной работе, запись гитар, сведение треков, мастеринг, работаю на площадках с живым звуком</p>
-      </div>
-    </section>
-  
-    <section class="l-Section">
-      <h2 class="l-Section-title h3">Skills</h2>
-      <div class="l-Section-content">
-        <ul>
-          <li> Делаю качественную запись <strong class="Tag">акустической гитары</strong>, <strong class="Tag">электрогитары</strong>,  <strong class="Tag">бас-гитары</strong></li>
-          <li>Свожу треки в стиле <strong class="Tag">Worship</strong> и <strong class="Tag">Рок</strong></li>
-      
-        </ul>
-      </div>
-    </section>
-  
-    <!-- <section class="l-Section">
-      <h2 class="l-Section-title h3">Experience</h2>
-      <div class="l-Section-content">
-        <h3>Freelance Front-end Developer</h3>
-        <a class="u-link" href="http://www.sonjastrieder.com/" target="_blank">Self-employed, Seattle</a> (WA)<br> May 2017 - present
-  
-        <h3>Front-end Developer</h3>
-        <a class="u-link" href="https://www.snaptechnology.co.uk/" target="_blank">Snap Fashion, London</a> (UK)<br> May 2014 - Jul 2016
-        <ul>
-          <li>Re-architected CSS/HTML codebase of the responsive Snap Fashion website for better maintainability and performance.</li>
-          <li>Introduced Grunt, Bower and npm to automate common tasks, optimize frontend assets and manage third party packages.</li>
-          <li>Created and maintained a style guide to use as a reference for our design language.</li>
-          <li>Delivered front-end work for various external and internal projects to the backend team.</li>
-          <li>Built a JavaScript widget for integration of product feeds on third party websites using the Snap Fashion API.</li>
-          <li>Developed prototypes including a Chrome extension and browser bookmarklet.</li>
-          <li>Offered guidance and support to the design team, advising on core web design principles, best practice and work flow.
-          </li>
-        </ul>
-  
-        <h3>Web Design & Interface Specialist</h3>
-        <a class="u-link" href="http://www.johnhenry.net/" target="_blank">JohnHenry, London</a> (UK)<br> Jun 2010 - May 2014
-        <ul>
-          <li>Working within a team of 16+ I’ve established myself as a front-end developer with a strong focus on web standards, semantics, accessibility and progressive enhancement (HTML/CSS).</li>
-          <li>Designed and/or built Wordpress themes as well as Shopify themes from scratch or customized them depending on the client’s needs.</li>
-          <li>Headed the design team and designed simple and clean user interfaces.
-          </li>
-        </ul>
-  
-        <h3>Web Specialist</h3>
-        <a class="u-link" href="http://www.johnhenry.net/" target="_blank">JohnHenry, London</a> (UK)<br> Oct 2009 - Jun 2010
-        <ul>
-          <li>Designed client websites and features as well as customized social media channels to improve their online presence.</li>
-          <li>Content management, including image processing for the web.</li>
-          <li>Built HTML newsletters and managed the distribution through the in house newsletter management system.</li>
-          <li>Assisted the development team with HTML and CSS updates
-          </li>
-        </ul>
-      </div>
-    </section> -->
-  
-    <section class="l-Section">
-      <h2 class="l-Section-title h3">Образование</h2>
-      <div class="l-Section-content">
-        <h3>незаконченный бакалавриат Автоматизации процессов и производств</h3>
-       
-      </div>
-    </section>
-  
-    <section class="l-Section u-hidden@print">
-      <h2 class="l-Section-title h3">Интересы</h2>
-      <div class="l-Section-content">
-        <p>Работа с живыми инструментами. Создавать свои аранжировки на уже знакомые песни. Прославлять Бога, служить в церкви.</p>
-      </div>
-    </section>
-  </article>
-  
-  <div class="l-Wrapper u-keyline">
-    <div class="l-Footer">
-      <div class="l-Footer-col">
-        <strong class="Tag">Д.Скорых</strong>
-      </div>
-      <div class="l-Footer-col Contact">
-        <a href="http://www.daniilSkorykh.com" target="_blank">http://www.daniilSkorykh.com</a>
-        <a href="mailto:skorykh.03@mail.ru" target="_blank">skorykh.03@mail.ru</a>
-      </div>
-    </div>
-  </div>
+
+    <script>
+        // Изменение фамилии
+        document.getElementById('changeNameBtn').addEventListener('click', function() {
+            const newLastName = document.getElementById('lastnameInput').value.trim();
+            if (newLastName) {
+                const fullname = document.getElementById('fullname');
+                const names = fullname.textContent.split(' ');
+                names[1] = newLastName;
+                fullname.textContent = names.join(' ');
+                document.getElementById('lastnameInput').value = '';
+            }
+        });
+        
+        // Случайный цвет фона
+        document.getElementById('randomBgBtn').addEventListener('click', function() {
+            const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            document.body.style.backgroundColor = randomColor;
+        });
+        
+        // Анимация при загрузке
+        document.querySelectorAll('section').forEach((section, index) => {
+            setTimeout(() => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }, 200 * index);
+        });
+    </script>
+</body>
+</html>
