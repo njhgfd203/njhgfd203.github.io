@@ -65,3 +65,13 @@ prevBtn2.addEventListener('click', function() {
     step3.classList.remove('active');
     step2.classList.add('active');
 });
+// Изменение фамилии
+document.getElementById('changeNameBtn').addEventListener('click', function() {
+    const newLastName = document.getElementById('lastnameInput').value.trim();
+    if (newLastName) {
+        const fullname = document.getElementById('fullname');
+        const names = fullname.textContent.split(' ');
+        names[1] = newLastName;
+        fullname.textContent = names.join(' ');
+    }
+});
